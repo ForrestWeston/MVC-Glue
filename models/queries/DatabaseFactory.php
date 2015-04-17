@@ -9,10 +9,10 @@ class DatabaseFactory
     {
         $connection_string = sprintf('%s:host=%s;dbname=%s', 
                                      'mysql',
-                                     'localhost',
+                                     '127.0.0.1', ///needs to be 127.0.0.1 on MAC and localhost on Linux
                                      'sakila'
                                      );
-        $db = new PDO($connection_string, 'root', 'password');
+        $db = new PDO($connection_string, 'root', '');
         return $db;
     }
     

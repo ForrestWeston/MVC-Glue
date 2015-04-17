@@ -18,21 +18,18 @@ class glue
 {
 	public function mvc_build_url($controller, $action, $params)
 	{
-		$url = $controller.'/'.$action.'/';
-		foreach ($p as &$params) {
-			$url.$p.'/';
-		}
-		return $url;
+		$url = $controller.'/'.$action.'/'.$params;
+
 	}	
 
 	public function mvc_build_style_url($css)
 	{
-		
+		return '/content/style'.$css;
 	}
 
 	public function mvc_build_script_url($script)
 	{
-		
+		return '/content/scripts'.$scripts;
 	}
 	
 	public function mvc_redirect($controller, $action, $params)

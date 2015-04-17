@@ -1,5 +1,4 @@
 <?php
-
 //for easier conversion to string
 $categories = array();
 $actors = array();
