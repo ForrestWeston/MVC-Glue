@@ -27,7 +27,7 @@ class glue
 
 	public function mvc_build_style_url($css)
 	{
-	
+		
 	}
 
 	public function mvc_build_script_url($script)
@@ -41,3 +41,4 @@ class glue
 	}
 	
 }
+

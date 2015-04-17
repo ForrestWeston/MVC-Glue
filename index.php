@@ -1,8 +1,14 @@
 <pre>
 <?php
+include 'View.php';
 print_r($_SERVER);
 spl_autoload_register(null, false);
 spl_autoload_extensions('.php');
+spl_autoload_register('controllerLoader');
+spl_autoload_register('modelLoader');
+spl_autoload_register('queriesLoader');
+spl_autoload_register('viewsLoader');
+
 
 function controllerLoader($className)
 {
@@ -40,10 +46,13 @@ function viewsLoader($className)
 	include $file;
 }
 
-spl_autoload_register('controllerLoader');
-spl_autoload_register('modelLoader');
-spl_autoload_register('queriesLoader');
-spl_autoload_register('viewsLoader');
+
+$class_name = "HomeController";
+$action_name = "indexAction";
+$params = "";
+$some_class = new $class_name;
+$result = $some_class->$action_name($params);
+print_r($result);
 
 
 ?>
