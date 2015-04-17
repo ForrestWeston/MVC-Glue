@@ -18,7 +18,11 @@ class glue
 {
 	public function mvc_build_url($controller, $action, $params)
 	{
-	
+		$url = $controller.'/'.$action.'/';
+		foreach ($p as &$params) {
+			$url.$p.'/';
+		}
+		return $url;
 	}	
 
 	public function mvc_build_style_url($css)

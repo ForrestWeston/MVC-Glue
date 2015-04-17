@@ -1,4 +1,5 @@
 <?php
+include 'IController.php';
 class ErrorController implements IController
 {
     public function indexAction($params)

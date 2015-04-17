@@ -12,7 +12,7 @@ class DatabaseFactory
                                      'localhost',
                                      'sakila'
                                      );
-        $db = new PDO($connection_string, 'cpts483', 'cpts483');
+        $db = new PDO($connection_string, 'root', 'password');
         return $db;
     }
     
